@@ -38,6 +38,7 @@ _patterns = [
     path(r'ipam/', include('ipam.urls')),
     path(r'secrets/', include('secrets.urls')),
     path(r'tenancy/', include('tenancy.urls')),
+    path(r'contacts/', include('contacts.urls')),
     path(r'user/', include('users.urls')),
     path(r'virtualization/', include('virtualization.urls')),
 
@@ -49,6 +50,7 @@ _patterns = [
     path(r'api/ipam/', include('ipam.api.urls')),
     path(r'api/secrets/', include('secrets.api.urls')),
     path(r'api/tenancy/', include('tenancy.api.urls')),
+    path(r'api/contacts/', include('contacts.api.urls')),
     path(r'api/virtualization/', include('virtualization.api.urls')),
     path(r'api/docs/', schema_view.with_ui('swagger'), name='api_docs'),
     path(r'api/redoc/', schema_view.with_ui('redoc'), name='api_redocs'),

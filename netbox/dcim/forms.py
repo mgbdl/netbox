@@ -20,6 +20,8 @@ from ipam.models import IPAddress, VLAN, VLANGroup
 from tenancy.forms import TenancyForm
 from tenancy.forms import TenancyFilterForm
 from tenancy.models import Tenant, TenantGroup
+from contacts.forms import ContactsForm
+from contacts.forms import ContactsFilterForm
 from utilities.forms import (
     APISelect, APISelectMultiple, add_blank_choice, ArrayFieldSelectMultiple, BootstrapMixin, BulkEditForm,
     BulkEditNullBooleanSelect, ChainedFieldsMixin, ChainedModelChoiceField, ColorSelect, CommentField, ComponentForm,
@@ -172,7 +174,7 @@ class RegionFilterForm(BootstrapMixin, forms.Form):
 # Sites
 #
 
-class SiteForm(BootstrapMixin, TenancyForm, CustomFieldForm):
+class SiteForm(BootstrapMixin, ContactsForm, TenancyForm, CustomFieldForm):
     region = TreeNodeChoiceField(
         queryset=Region.objects.all(),
         required=False,
@@ -191,7 +193,7 @@ class SiteForm(BootstrapMixin, TenancyForm, CustomFieldForm):
         fields = [
             'name', 'slug', 'status', 'region', 'tenant_group', 'tenant', 'facility', 'asn', 'time_zone', 'description',
             'physical_address', 'shipping_address', 'latitude', 'longitude', 'contact_name', 'contact_phone',
-            'contact_email', 'comments', 'tags',
+            'contact_email', 'comments', 'tags', 'contact', 'contact_group'
         ]
         widgets = {
             'physical_address': SmallTextarea(
@@ -302,7 +304,7 @@ class SiteBulkEditForm(BootstrapMixin, AddRemoveTagsForm, CustomFieldBulkEditFor
         ]
 
 
-class SiteFilterForm(BootstrapMixin, TenancyFilterForm, CustomFieldFilterForm):
+class SiteFilterForm(BootstrapMixin, ContactsFilterForm, TenancyFilterForm, CustomFieldFilterForm):
     model = Site
     field_order = ['q', 'status', 'region', 'tenant_group', 'tenant']
     q = forms.CharField(

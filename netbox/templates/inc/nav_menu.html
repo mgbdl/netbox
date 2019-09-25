@@ -59,6 +59,26 @@
                             <a href="{% url 'tenancy:tenantgroup_list' %}">Tenant Groups</a>
                         </li>
                         <li class="divider"></li>
+                        <li class="dropdown-header">Contacts</li>
+                        <li{% if not perms.contacts.view_contact %} class="disabled"{% endif %}>
+                            {% if perms.contacts.add_contact %}
+                                <div class="buttons pull-right">
+                                    <a href="{% url 'contacts:contact_add' %}" class="btn btn-xs btn-success" title="Add"><i class="fa fa-plus"></i></a>
+                                    <a href="{% url 'contacts:contact_import' %}" class="btn btn-xs btn-info" title="Import"><i class="fa fa-download"></i></a>
+                                </div>
+                            {% endif %}
+                            <a href="{% url 'contacts:contact_list' %}">Contacts</a>
+                        </li>
+                        <li{% if not perms.contacts.view_contactgroup %} class="disabled"{% endif %}>
+                            {% if perms.contacts.add_contactgroup %}
+                                <div class="buttons pull-right">
+                                    <a href="{% url 'contacts:contactgroup_add' %}" class="btn btn-xs btn-success" title="Add"><i class="fa fa-plus"></i></a>
+                                    <a href="{% url 'contacts:contactgroup_import' %}" class="btn btn-xs btn-info" title="Import"><i class="fa fa-download"></i></a>
+                                </div>
+                            {% endif %}
+                            <a href="{% url 'contacts:contactgroup_list' %}">Contact Groups</a>
+                        </li>
+                        <li class="divider"></li>
                         <li class="dropdown-header">Miscellaneous</li>
                         <li{% if not perms.extras.view_tag %} class="disabled"{% endif %}>
                             <a href="{% url 'extras:tag_list' %}">Tags</a>

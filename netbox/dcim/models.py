@@ -262,6 +262,13 @@ class Site(ChangeLoggedModel, CustomFieldModel):
         blank=True,
         null=True
     )
+    contact = models.ForeignKey(
+        to='contacts.Contact',
+        on_delete=models.PROTECT,
+        related_name='sites',
+        blank=True,
+        null=True
+    )
     facility = models.CharField(
         max_length=50,
         blank=True

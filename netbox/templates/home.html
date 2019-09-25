@@ -29,7 +29,17 @@
                         <h4 class="list-group-item-heading">Tenants</h4>
                     {% endif %}
                         <p class="list-group-item-text text-muted">Customers or departments</p>
-                    </div>
+                </div>
+                <div class="list-group-item">
+                    {% if perms.contacts.view_contact %}
+                        <span class="badge pull-right">{{ stats.contact_count }}</span>
+                        <h4 class="list-group-item-heading"><a href="{% url 'contacts:contact_list' %}">Contacts</a></h4>
+                    {% else %}
+                        <span class="badge pull-right"><i class="fa fa-lock"></i></span>
+                        <h4 class="list-group-item-heading">Contacts</h4>
+                    {% endif %}
+                        <p class="list-group-item-text text-muted">Asset Owners</p>
+                </div>
             </div>
         </div>
         <div class="panel panel-default">

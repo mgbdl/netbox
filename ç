@@ -1,0 +1,47 @@
+Contact Module
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch develop
+# Your branch is up to date with 'origin/develop'.
+#
+# Changes to be committed:
+#	new file:   netbox/contacts/__init__.py
+#	new file:   netbox/contacts/admin.py
+#	new file:   netbox/contacts/api/__init__.py
+#	new file:   netbox/contacts/api/nested_serializers.py
+#	new file:   netbox/contacts/api/serializers.py
+#	new file:   netbox/contacts/api/urls.py
+#	new file:   netbox/contacts/api/views.py
+#	new file:   netbox/contacts/apps.py
+#	new file:   netbox/contacts/constants.py
+#	new file:   netbox/contacts/filters.py
+#	new file:   netbox/contacts/filtersets.py
+#	new file:   netbox/contacts/forms.py
+#	new file:   netbox/contacts/migrations/0001_initial.py
+#	new file:   netbox/contacts/migrations/0002_auto_20190925_0333.py
+#	new file:   netbox/contacts/migrations/0003_auto_20190925_0509.py
+#	new file:   netbox/contacts/migrations/0004_auto_20190925_0518.py
+#	new file:   netbox/contacts/migrations/0005_auto_20190925_0530.py
+#	new file:   netbox/contacts/migrations/0006_auto_20190925_0554.py
+#	new file:   netbox/contacts/migrations/__init__.py
+#	new file:   netbox/contacts/models.py
+#	new file:   netbox/contacts/tables.py
+#	new file:   netbox/contacts/tests.py
+#	new file:   netbox/contacts/urls.py
+#	new file:   netbox/contacts/views.py
+#	modified:   netbox/dcim/forms.py
+#	new file:   netbox/dcim/migrations/0075_site_contact.py
+#	modified:   netbox/dcim/models.py
+#	deleted:    netbox/netbox/configuration.example.py
+#	modified:   netbox/netbox/settings.py
+#	modified:   netbox/netbox/urls.py
+#	new file:   netbox/templates/contacts/contact.html
+#	new file:   netbox/templates/contacts/contact_edit.html
+#	new file:   netbox/templates/contacts/contact_list.html
+#	new file:   netbox/templates/contacts/contactgroup_list.html
+#	modified:   netbox/templates/dcim/site_edit.html
+#	modified:   netbox/templates/home.html
+#	modified:   netbox/templates/inc/nav_menu.html
+#	modified:   netbox/utilities/forms.py
+#
