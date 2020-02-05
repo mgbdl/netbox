@@ -307,6 +307,7 @@ class RackGroupBulkDeleteView(PermissionRequiredMixin, BulkDeleteView):
 class RackRoleListView(PermissionRequiredMixin, ObjectListView):
     permission_required = 'dcim.view_rackrole'
     queryset = RackRole.objects.annotate(rack_count=Count('racks'))
+    filterset = filters.RackRooleFilterSet
     table = tables.RackRoleTable
     template_name = 'dcim/rackrole_list.html'
 
